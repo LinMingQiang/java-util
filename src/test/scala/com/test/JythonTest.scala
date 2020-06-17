@@ -7,7 +7,7 @@ import org.python.core.PyFunction
 
 object JythonTest {
   def main(args: Array[String]): Unit = {
-    var jythonInterp = JythonManager.getInterp();
+    val jythonInterp = JythonManager.getInterp();
     val code = s"""
 #这是中文注释
 def transform(data):

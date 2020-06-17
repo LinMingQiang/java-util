@@ -10,9 +10,9 @@ object TestMvel {
 
   }
   def executeExpression(): Unit = {
-    val expression = "a == '经理 1'"
+    val expression = "word == 'hello world'"
     val vars = new HashMap[String, Any]();
-    vars.put("a", "经理 1");
+    vars.put("word", "hello world");
     val re = MvelCommonUtil()
     println(re.executeExpression(expression, vars))
   }
