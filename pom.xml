@@ -1,8 +1,8 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.script.util</groupId>
-	<artifactId>java-scriptengine-util</artifactId>
+	<groupId>com.java.util</groupId>
+	<artifactId>java-util</artifactId>
 	<version>1.0</version>
 	<name>${project.artifactId}</name>
 	<description>My wonderfull scala app</description>
@@ -16,8 +16,8 @@
 	</licenses>
 
 	<properties>
-		<maven.compiler.source>1.6</maven.compiler.source>
-		<maven.compiler.target>1.6</maven.compiler.target>
+		<maven.compiler.source>1.7</maven.compiler.source>
+		<maven.compiler.target>1.7</maven.compiler.target>
 		<encoding>UTF-8</encoding>
 		<scala.version>2.11.5</scala.version>
 		<scala.compat.version>2.11</scala.compat.version>
@@ -28,6 +28,11 @@
 			<groupId>org.python</groupId>
 			<artifactId>jython-standalone</artifactId>
 			<version>2.7.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.mvel</groupId>
+			<artifactId>mvel2</artifactId>
+			<version>2.0</version>
 		</dependency>
 	</dependencies>
 
@@ -48,7 +53,6 @@
 						</goals>
 						<configuration>
 							<args>
-								<arg>-make:transitive</arg>
 								<arg>-dependencyfile</arg>
 								<arg>${project.build.directory}/.scala_dependencies</arg>
 							</args>
