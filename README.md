@@ -1,6 +1,4 @@
-#Java Util
-**Java Python** <br> 
-java 代码调用 python脚本
+**Java 调用 Python** <br> 
 ```
 val jythonInterp = JythonManager.getInterp();
     val code = s"""
@@ -16,7 +14,6 @@ val d = jythonInterp.compile(Py.newStringOrUnicode(code).toString())
     jythonInterp.exec(d)
 ```
 **Java 表达式解析 Mvel** <br>
-用于表达式判断
 ```
 val expression = "word == 'hello world'"
     val vars = new HashMap[String, Any]();
